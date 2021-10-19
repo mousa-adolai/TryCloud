@@ -11,9 +11,9 @@ public class UserStory3_Step_Def {
         System.out.println("@Given code can use as: login_as_a_user");
     }
 
-    @Then("Verify the page tile is \"Files-Trycloud")
-    public void verify_the_page_tile_is_files_trycloud() {
-        System.out.println("@Then code can use as: verify_the_page_tile_is_files_trycloud");
+    @Then("Verify the page tile is {string}")
+    public void verifyThePageTileIs(String arg0) {
+        System.out.println("@Then code can use as: verifyThePageTileIs");
     }
 
     @Given("login as a user")
@@ -35,4 +35,6 @@ public class UserStory3_Step_Def {
     }
 
 
-}
+
+    }
+
