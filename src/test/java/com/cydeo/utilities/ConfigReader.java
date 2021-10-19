@@ -5,20 +5,26 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
+    // Declare properties object at class level so that it can be accessible in methods
+    private static Properties properties = new Properties();
 
-    private static final Properties properties = new Properties();
-
+    // Load the file once
     static {
         try {
-            FileInputStream in = new FileInputStream("configuration.properties");
+            FileInputStream in = new FileInputStream("config.properties");
             properties.load(in);
-        }catch (IOException e){
-            System.out.println("e.getMessage() = " + e.getMessage());
+            in.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
     }
 
-    public String getProperty(String key){
+    /*
+    *   Get the value of the key according to the argument passed
+    *   @param
+    *   @return the value of the key provided
+     */
+    public static String readProperty(String key) {
         return properties.getProperty(key);
     }
-
 }
