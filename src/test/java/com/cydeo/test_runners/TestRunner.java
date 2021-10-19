@@ -7,9 +7,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "classpath:features",
         glue = "com/cydeo/step_definitions",
-        tags = "@practice and @exploring",
+      //  tags = "",
         publish = true,
-        dryRun = false
+      //  dryRun = false,
+        plugin = {"pretty","html:target/cucumber.html",
+        "me.jvt.cucumber.report.PrettyReports:target"}
 )
 public class TestRunner {
 }

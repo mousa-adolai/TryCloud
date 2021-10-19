@@ -3,6 +3,8 @@ package com.cydeo.step_definitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
+import static org.junit.Assert.*;
+
 public class SayHelloDefinitions {
 
     @Given("smile")
@@ -12,6 +14,7 @@ public class SayHelloDefinitions {
 
     @Then("{word} says hello to the world")
     public void helloWorld(String name){
-        System.out.println(name + " says hello world");
+        System.out.println("name = " + name);
+        fail();
     }
 }
