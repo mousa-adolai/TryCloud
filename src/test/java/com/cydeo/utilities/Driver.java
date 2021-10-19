@@ -11,11 +11,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import static com.cydeo.utilities.ConfigReader.*;
 
 public class Driver {
     private static WebDriver obj;
-    private static String browser = "chrome";
 
     private Driver() {}
 
@@ -24,6 +22,8 @@ public class Driver {
      Will return the same object if it already exists. It will only create a new one if it is null
      */
     public static WebDriver getDriver() {
+       String browser = ConfigReader.readProperty("browser");
+
         if (obj == null) {
             switch (browser) {
                 case "chrome":
@@ -40,7 +40,6 @@ public class Driver {
                     break;
                 default:
                     System.err.println("INVALID BROWSER");
-                    break;
             }
         }
 

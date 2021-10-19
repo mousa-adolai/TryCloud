@@ -9,13 +9,16 @@ import static com.cydeo.utilities.Driver.getDriver;
 
 public class LoginPage {
     @FindBy(id = "user")
-    private WebElement username_input;
+    private WebElement usernameInput;
 
     @FindBy(id = "password")
-    private WebElement password_input;
+    private WebElement passwordInput;
 
     @FindBy(id = "submit-form")
-    private WebElement login_btn;
+    private WebElement loginBtn;
+
+    @FindBy(id = "user")
+    private WebElement loginErrorMessage;
 
     public LoginPage() {
         PageFactory.initElements(getDriver(), this);
@@ -30,8 +33,12 @@ public class LoginPage {
         goTo();
 
         // Login
-        username_input.sendKeys(username);
-        password_input.sendKeys(password);
-        login_btn.click();
+        usernameInput.sendKeys(username);
+        passwordInput.sendKeys(password);
+        loginBtn.click();
+    }
+
+    public boolean isLoginErrorMessageDisplayed(){
+        return loginErrorMessage.isDisplayed();
     }
 }
