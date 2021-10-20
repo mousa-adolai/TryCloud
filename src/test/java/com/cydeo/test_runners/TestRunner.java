@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "classpath:features",
         glue = "com/cydeo/step_definitions",
-        tags = "@ui and @us1",
+        tags = "@ui and @test",
         publish = true,
       //  dryRun = false,
         plugin = {"pretty","html:target/cucumber.html",
