@@ -9,8 +9,8 @@ Feature: Test added functionality here
     Then user should be on the "<nav>" page
     Examples:
       |   nav       |
-      |   files     |
-      |   dashboard |
-      |   photos    |
-      |   talk      |
-      |   contacts  |
+      |   Files     |
+      |   Dashboard |
+      |   Photos    |
+      |   Talk      |
+      |   Contacts  |
