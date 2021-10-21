@@ -9,6 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import static com.cydeo.pages.Navigation.goToLink;
 import static com.cydeo.utilities.ConfigReader.readProperty;
 import static com.cydeo.utilities.Driver.getDriver;
 import static org.junit.Assert.assertEquals;
@@ -16,7 +17,6 @@ import static org.junit.Assert.assertTrue;
 
 public class TalksModuleStepDef {
     LoginPage login_page = new LoginPage();
-    Navigation nav = new Navigation();
     Talk talks = new Talk();
 
     @Given("a user has logged in")
@@ -26,7 +26,7 @@ public class TalksModuleStepDef {
 
     @When("the user clicks the talks module")
     public void theUserClicksTheTalksModule() {
-        nav.goToLink("talk");
+        goToLink("Talk");
     }
 
     @Then("the user should be at the Talks module page")

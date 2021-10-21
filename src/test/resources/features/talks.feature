@@ -13,4 +13,4 @@ Feature: Talks module
     Then the message should be displayed in the conversation log with "<message>"
     Examples:
       |   user      |   message                 |
-      |   user94   |   This another message example 94  |
+      |   user94   |   This a trial message example 94  |
