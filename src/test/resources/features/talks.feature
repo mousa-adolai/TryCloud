@@ -7,8 +7,10 @@ Feature: Talks module
   Scenario: A user can access the Talks module
     Then the user should be at the Talks module page
 
-  Scenario: A user can send messages
+  Scenario Outline: A user can send messages
     When the user searches for a "<user>" from the box on the top left
-    And the user writes a message
-    And the user clicks the send button
-    Then the message should be displayed in the conversation log
+    And the user sends a message "<message>"
+    Then the message should be displayed in the conversation log with "<message>"
+    Examples:
+      |   user      |   message                 |
+      |   user94   |   This another message example 94  |

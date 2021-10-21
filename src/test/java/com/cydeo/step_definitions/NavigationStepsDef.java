@@ -1,17 +1,18 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.pages.Navigation;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
 import static com.cydeo.utilities.Driver.getDriver;
 import static org.junit.Assert.assertEquals;
-import static com.cydeo.pages.Navigation.goToLink;
 
 public class NavigationStepsDef {
+    Navigation nav = new Navigation();
 
     @And("user clicks on {string}")
     public void userClicksOn(String str) {
-        goToLink(str);
+        nav.goToLink(str);
     }
 
     @Then("user should be on the {string} page")
