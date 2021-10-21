@@ -2,12 +2,14 @@ package com.cydeo.step_definitions;
 
 import com.cydeo.pages.LoginPage;
 import com.cydeo.pages.SearchFiles;
+import com.cydeo.utilities.BrowserUtil;
 import com.cydeo.utilities.ConfigReader;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
@@ -16,6 +18,7 @@ import static org.junit.Assert.assertTrue;
 
 public class US14 {
     SearchFiles search = new SearchFiles();
+
 
     @Given("user is at the dashboard page")
     public void userIsAtTheDashboardPage() {
@@ -45,6 +48,6 @@ public class US14 {
         WebElement file = Driver.getDriver().findElement(By.xpath("//*[@id=\"header-menu-unified-search\"]/div[2]/ul[2]/li[1]/a/span/h3"));
         assertTrue(file.isDisplayed());
 
-        Driver.closeBrowser();
+
     }
 }

@@ -1,3 +1,4 @@
+@ui
 Feature: User searches files
 
   As a user, I should be able to access search any item/ users from the homepage.
