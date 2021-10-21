@@ -10,6 +10,7 @@ import static com.cydeo.utilities.Driver.getDriver;
 
 public class Navigation {
 
+
     /**
      * Method to click a link on the navigation
      * @param link_name is the name of the module you want to access. Should be in Camel Case.
