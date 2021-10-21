@@ -4,5 +4,4 @@ target
 *.iml
 misc.xml
 .settings
-
-
+.project
