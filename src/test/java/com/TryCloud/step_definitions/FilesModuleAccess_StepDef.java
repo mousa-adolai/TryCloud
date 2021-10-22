@@ -11,28 +11,22 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
 import static org.junit.Assert.*;
-
 
 public class FilesModuleAccess_StepDef {
     LoginPage loginPage = new LoginPage();
     FilesModulePage filesModulePage = new FilesModulePage();
     FilesSettingsPage filesSettingsPage= new FilesSettingsPage();
-    BrowserUtil browserUtil= new BrowserUtil();
     String storageNumber= "";
 
     @Given("Login as a user {string} and passcode {string}")
         public void loginAsAUserAndPasscode(String email, String password) {
         loginPage.login(ConfigReader.readProperty(email),ConfigReader.readProperty(password));
-
     }
+
     @Then("Click on file")
     public void clickOnFile() {
         filesModulePage.filesTab.click();
-
     }
 
         @And("Click Settings on the left bottom corner")
@@ -50,28 +44,21 @@ public class FilesModuleAccess_StepDef {
 
     @When("Check the current storage usage")
     public void checkTheCurrentStorageUsage() {
-
        storageNumber = filesSettingsPage.usageStorage.getText();
     }
 
     @Then("Upload a file")
     public void uploadAFile() {
         filesSettingsPage.plusBtn.click();
-        //filesSettingsPage.uploadFileBtn.click();
-
-
+        // add your file's pathname, so you can run the functionality
         filesSettingsPage.uploadFileBtn.sendKeys("/Users/karinaquezada/Desktop/test1.docx");
         BrowserUtil.waitFor(4);
-
-
     }
 
     @And("Refresh the page")
     public void refreshThePage() {
        Driver.getDriver().navigate().refresh();
         BrowserUtil.waitFor(2);
-
-
     }
 
     @Then("Verify the storage usage is increased")
@@ -80,12 +67,9 @@ public class FilesModuleAccess_StepDef {
         String first = newStorageNumber.replaceAll("[^\\d]", "");
         String second = storageNumber.replaceAll("[^\\d]", "");
 
-
         if (Integer.parseInt(first) > Integer.parseInt(second)){
            Assert.assertTrue(true);
        }
-       }
-
-
+    }
 }
 

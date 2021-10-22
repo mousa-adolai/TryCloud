@@ -40,6 +40,10 @@ public class FilesModulePage {
 PageFactory.initElements(Driver.getDriver(),this);
 }
 
+    public boolean isOnFilePage() {
+        return Driver.getDriver().getTitle().contains("Files - Trycloud QA");
 
+
+    }
 
 }

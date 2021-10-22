@@ -1,5 +1,11 @@
 package com.TryCloud.utilities;
 
+import com.github.javafaker.Faker;
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class BrowserUtil {
 
     public static void waitFor(int second) {
@@ -10,4 +16,9 @@ public class BrowserUtil {
         }
 
     }
+    public static int randomNumber(int a, int b) {
+        return new Faker().number().numberBetween(a, b);
+    }
+
+
 }
