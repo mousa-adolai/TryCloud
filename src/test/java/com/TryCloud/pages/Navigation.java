@@ -1,12 +1,12 @@
-package com.cydeo.pages;
+package com.TryCloud.pages;
 
-import com.cydeo.utilities.Driver;
+import com.TryCloud.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static com.cydeo.utilities.Driver.getDriver;
+import static com.TryCloud.utilities.Driver.getDriver;
 
 public class Navigation {
 

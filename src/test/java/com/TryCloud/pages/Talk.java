@@ -1,18 +1,16 @@
-package com.cydeo.pages;
+package com.TryCloud.pages;
 
-import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.cydeo.utilities.BrowserUtil.waitFor;
-import static com.cydeo.utilities.Driver.getDriver;
+import static com.TryCloud.utilities.BrowserUtil.waitFor;
+import static com.TryCloud.utilities.Driver.getDriver;
 
 public class Talk {
     @FindBy(xpath = "//*[@id='app-navigation-vue']/div[1]/form/input")

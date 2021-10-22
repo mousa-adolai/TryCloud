@@ -1,11 +1,12 @@
-package com.cydeo.step_definitions;
+package com.TryCloud.step_definitions;
 
-import com.cydeo.pages.Navigation;
+import com.TryCloud.pages.Navigation;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-import static com.cydeo.utilities.Driver.getDriver;
+import static com.TryCloud.utilities.Driver.getDriver;
 import static org.junit.Assert.assertEquals;
+import static com.TryCloud.pages.Navigation.goToLink;
 
 public class NavigationStepsDef {
     Navigation nav = new Navigation();

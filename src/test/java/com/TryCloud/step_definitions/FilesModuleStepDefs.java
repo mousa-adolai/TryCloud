@@ -1,8 +1,8 @@
-package com.cydeo.step_definitions;
+package com.TryCloud.step_definitions;
 
-import com.cydeo.pages.FilesModulePage;
-import com.cydeo.pages.LoginPage;
-import com.cydeo.utilities.BrowserUtil;
+import com.TryCloud.pages.FilesModulePage;
+import com.TryCloud.pages.LoginPage;
+import com.TryCloud.utilities.BrowserUtil;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

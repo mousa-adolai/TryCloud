@@ -1,17 +1,17 @@
-package com.cydeo.step_definitions;
+package com.TryCloud.step_definitions;
 
-import com.cydeo.pages.LoginPage;
-import com.cydeo.pages.Navigation;
-import com.cydeo.pages.Talk;
+import com.TryCloud.pages.LoginPage;
+import com.TryCloud.pages.Navigation;
+import com.TryCloud.pages.Talk;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import static com.cydeo.pages.Navigation.goToLink;
-import static com.cydeo.utilities.ConfigReader.readProperty;
-import static com.cydeo.utilities.Driver.getDriver;
+import static com.TryCloud.pages.Navigation.goToLink;
+import static com.TryCloud.utilities.ConfigReader.readProperty;
+import static com.TryCloud.utilities.Driver.getDriver;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 

@@ -1,4 +1,4 @@
-package com.cydeo.utilities;
+package com.TryCloud.utilities;
 
 /*
     This class will return a single driver object, regardless of the number of times it is called
@@ -22,6 +22,9 @@ public class Driver {
      Will return the same object if it already exists. It will only create a new one if it is null
      */
     public static WebDriver getDriver() {
+
+
+
        String browser = ConfigReader.readProperty("browser");
 
         if (obj == null) {
@@ -44,6 +47,9 @@ public class Driver {
         }
 
         return obj;
+
+
+
     }
 
     /**
@@ -60,4 +66,6 @@ public class Driver {
             obj = null;
         }
     }
+
+
 }

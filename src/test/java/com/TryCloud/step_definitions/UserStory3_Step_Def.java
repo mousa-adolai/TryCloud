@@ -1,11 +1,11 @@
-package com.cydeo.step_definitions;
+package com.TryCloud.step_definitions;
 
-import com.cydeo.pages.DashBoardPage;
-import com.cydeo.pages.FilesModulePage;
-import com.cydeo.pages.LoginPage;
-import com.cydeo.pages.Navigation;
-import com.cydeo.utilities.ConfigReader;
-import com.cydeo.utilities.Driver;
+import com.TryCloud.pages.DashBoardPage;
+import com.TryCloud.pages.FilesModulePage;
+import com.TryCloud.pages.LoginPage;
+import com.TryCloud.pages.Navigation;
+import com.TryCloud.utilities.ConfigReader;
+import com.TryCloud.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

@@ -1,4 +1,4 @@
-package com.cydeo.utilities;
+package com.TryCloud.utilities;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.WebElement;

@@ -1,4 +1,4 @@
-package com.cydeo.step_definitions;
+package com.TryCloud.step_definitions;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -8,8 +8,8 @@ import org.openqa.selenium.TakesScreenshot;
 
 import java.util.concurrent.TimeUnit;
 
-import static com.cydeo.utilities.Driver.closeBrowser;
-import static com.cydeo.utilities.Driver.getDriver;
+import static com.TryCloud.utilities.Driver.closeBrowser;
+import static com.TryCloud.utilities.Driver.getDriver;
 
 /**
  * Hook class contains methods that run before &/or after each scenario
