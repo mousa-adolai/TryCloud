@@ -1,4 +1,4 @@
-@ui @us1
+@ui @us1 @us
 Feature: Login Functionality
   As a user,
   I should be able to log in

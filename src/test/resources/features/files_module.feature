@@ -1,4 +1,4 @@
-@ui @us6
+@ui @us6 @us
 Feature:  Files module
 
   Scenario Outline: As a user,

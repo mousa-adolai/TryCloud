@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "classpath:features",
         glue = "com/TryCloud/step_definitions",
-        tags = "@ui and @test",
+        tags = "@us",
         publish = true,
       //  dryRun = false,
         plugin = {"pretty","html:target/cucumber.html",

@@ -1,4 +1,4 @@
-@ui
+@ui @us
 Feature: Talks module
   Background:
     Given a user has logged in
