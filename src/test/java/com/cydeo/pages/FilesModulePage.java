@@ -1,9 +1,14 @@
 package com.cydeo.pages;
 
+import com.cydeo.utilities.BrowserUtil;
 import com.cydeo.utilities.Driver;
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class FilesModulePage {
 
@@ -20,9 +25,6 @@ public class FilesModulePage {
     public WebElement plusIcon1;
 
 
-
-
-
     @FindBy(xpath = "//a[@class='menuitem'][1]")
     public WebElement newFolderTab;
 
@@ -34,16 +36,29 @@ public class FilesModulePage {
 
     @FindBy(xpath = "//h2[@class='app-sidebar-header__maintitle']")
     public WebElement verify;
+    @FindBy(xpath = "//td[@class='selection']/input")
+    public List<WebElement> allCboxFiles;
+    @FindBy(xpath = "//label[@for='select_all_files']")
+    public WebElement selectAllCbox;
+
 
 
     public FilesModulePage() {
-PageFactory.initElements(Driver.getDriver(),this);
-}
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
     public boolean isOnFilePage() {
         return Driver.getDriver().getTitle().contains("Files - Trycloud QA");
 
+    }
+
 
     }
 
-}
+
+
+
+
+
+
+
